@@ -1,19 +1,17 @@
 horizontal_position = 0
 depth = 0
 
-with open('course.txt') as f:
-    lines = f.readlines()
-    print(lines)
-    
+with open('course.txt') as input:
+    lines = input.readlines()  
     for line in lines:
-        direction, step  = line.split(" ")
-        step = int(step)
-        if direction == 'forward' and step > 0:
-            horizontal_position += step
-        if direction == 'up' and step > 0:
-            depth -= step
-        if direction == 'down' and step > 0:
-            depth += step
+        direction, units  = line.split(" ")
+        units = int(units)
+        if direction == 'forward' and units > 0:
+            horizontal_position += units
+        if direction == 'up' and units > 0:
+            depth -= units
+        if direction == 'down' and units > 0:
+            depth += units
     print(horizontal_position * depth)
     
     # with open("day2.txt") as puzzle_input:
