@@ -1,7 +1,7 @@
 count = 0
 
-with open('input.txt') as f:
-    lines = f.readlines()
+with open('input.txt') as input:
+    lines = input.readlines()
     for i in range(len(lines)):
         lines[i] = int(lines[i])
     for i in range(len(lines)-1):
