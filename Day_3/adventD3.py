@@ -27,4 +27,4 @@ with open('binary.txt') as input:
             
         else:
             epsilon_rate += '1'       
-        print((int(gamma_rate,2) * int(epsilon_rate,2)))
+    print((int(gamma_rate,2) * int(epsilon_rate,2)))
